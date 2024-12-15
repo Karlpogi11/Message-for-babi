@@ -1,5 +1,15 @@
-const cursor = document.querySelector(".cursor");
-window.addEventListener("mousemove", function (e) {
-  cursor.style.left = e.x - 100 + "px";
-  cursor.style.top = e.y - 100 + "px";
-});
+body {
+  margin: 0;
+  height: 100vh;
+  cursor: none; /* Hide default cursor */
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /* Prevents interaction with the cursor */
+  transform: translate(-50%, -50%);
+}
